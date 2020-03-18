@@ -1,2 +1,1 @@
-# avc
-AVC F.A.S.T
+# AVC F.A.S.T
