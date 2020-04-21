@@ -3,6 +3,7 @@ package com.example.avcapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import com.example.avcapp.utils.makeStatusBarTransparent
 
 class SettingsActivity : AppCompatActivity() {
 

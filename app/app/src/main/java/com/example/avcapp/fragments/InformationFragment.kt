@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.fragments
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.avcapp.R
 
 
 private const val ARG_PARAM1 = "param1"
@@ -38,7 +38,10 @@ class InformationFragment : Fragment() {
 
         val fragmentManager = fragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-        fragmentTransaction.add(R.id.fragmentInformation, StrokeSymptomsFragment())
+        fragmentTransaction.add(
+            R.id.fragmentInformation,
+            StrokeSymptomsFragment()
+        )
         fragmentTransaction.commit()
 
         strokeSymptoms.setOnClickListener{
@@ -48,7 +51,10 @@ class InformationFragment : Fragment() {
             fast.setTextColor(resources.getColor(R.color.titleColor))
 
             val ft: FragmentTransaction = fragmentManager.beginTransaction()
-            ft.replace(R.id.fragmentInformation, StrokeSymptomsFragment())
+            ft.replace(
+                R.id.fragmentInformation,
+                StrokeSymptomsFragment()
+            )
             ft.commit()
         }
 
@@ -59,7 +65,10 @@ class InformationFragment : Fragment() {
             strokeSymptoms.setTextColor(resources.getColor(R.color.titleColor))
 
             val ft: FragmentTransaction = fragmentManager.beginTransaction()
-            ft.replace(R.id.fragmentInformation, FastFragment())
+            ft.replace(
+                R.id.fragmentInformation,
+                FastFragment()
+            )
             ft.commit()
         }
 

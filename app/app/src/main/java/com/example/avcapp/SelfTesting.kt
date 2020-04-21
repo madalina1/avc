@@ -1,18 +1,17 @@
 package com.example.avcapp
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.avcapp.utils.makeStatusBarTransparent
 
-
-class OtherTesting : AppCompatActivity() {
+class SelfTesting : AppCompatActivity() {
 
     private var backPressed: Boolean? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_other_testing)
+        setContentView(R.layout.activity_self_testing)
 
         makeStatusBarTransparent()
 

@@ -21,7 +21,7 @@
     <string name="information_practice_time">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
     <string name="information_practice_button">Practice test</string>
     <string name="title_activity_settings">Settings</string>
-    
+
     <string name="back_pressed_message">Press back again to exit</string>
 
     <!-- Preference Titles -->

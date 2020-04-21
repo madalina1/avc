@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.example.avcapp.utils.makeStatusBarTransparent
 import com.google.android.material.tabs.TabLayout
 
 
@@ -51,6 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     fun goToOtherTest(view: View?) {
         val intent = Intent(this, OtherTesting::class.java)
+        startActivity(intent)
+    }
+
+    fun goToSelfTest(view: View) {
+        val intent = Intent(this, SelfTesting::class.java)
         startActivity(intent)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import com.example.avcapp.R
 import java.io.BufferedReader
 import java.io.IOException
 

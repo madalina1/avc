@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.utils
 
 import android.app.Activity
 import android.graphics.Color
