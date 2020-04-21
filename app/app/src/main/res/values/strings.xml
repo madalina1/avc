@@ -1,3 +1,45 @@
 <resources>
-    <string name="app_name">AvcApp</string>
+    <string name="app_name">Stroke Help</string>
+
+    <string name="testing_fragment">Testing</string>
+    <string name="map_fragment">Map</string>
+    <string name="information_fragment">Information</string>
+
+    <string name="welcome_message">Welcome, John Doe!</string>
+
+    <string name="test_somebody_title">Test somebody else</string>
+    <string name="test_yourself_title">Test yourself</string>
+
+    <string name="information_symptoms">Stroke symptoms</string>
+    <string name="information_fast">F.A.S.T</string>
+
+    <string name="information_face_title">Face</string>
+    <string name="information_arms_title">Arms</string>
+    <string name="information_speech_title">Speech</string>
+    <string name="information_time_title">Time</string>
+
+    <string name="information_practice_time">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+    <string name="information_practice_button">Practice test</string>
+    <string name="title_activity_settings">Settings</string>
+    
+    <string name="back_pressed_message">Press back again to exit</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

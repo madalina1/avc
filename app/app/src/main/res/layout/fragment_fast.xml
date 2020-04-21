@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FastFragment"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <TextView
+            android:id="@+id/face_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/information_face_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/titleColor"/>
+
+        <TextView
+            android:id="@+id/face_text"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/face_title"
+            android:layout_toStartOf="@+id/face_image"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textColor"/>
+
+        <ImageView
+            android:id="@+id/face_image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/face"
+            android:layout_below="@+id/face_title"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/information_face_title" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separatorColor"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <TextView
+            android:id="@+id/arms_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/information_arms_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="18sp"
+            android:textColor="@color/titleColor"/>
+
+        <TextView
+            android:id="@+id/arms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/arms_title"
+            android:layout_toStartOf="@+id/arms_image"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textColor"/>
+
+        <ImageView
+            android:id="@+id/arms_image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/arms"
+            android:layout_below="@+id/arms_title"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/information_face_title" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separatorColor"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <TextView
+            android:id="@+id/speech_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/information_speech_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="18sp"
+            android:textColor="@color/titleColor"/>
+
+        <TextView
+            android:id="@+id/speech_text"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/speech_title"
+            android:layout_toStartOf="@+id/speech_image"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textColor"/>
+
+        <ImageView
+            android:id="@+id/speech_image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/speech"
+            android:layout_below="@+id/speech_title"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/information_face_title" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separatorColor"
+        />
+
+    <RelativeLayout
+        android:id="@+id/time_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <TextView
+            android:id="@+id/time_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/information_time_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="18sp"
+            android:textColor="@color/titleColor"/>
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/time_title"
+            android:layout_toStartOf="@+id/time_image"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textColor"/>
+
+        <ImageView
+            android:id="@+id/time_image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/stroke_symptoms_fragment"
+            android:layout_below="@+id/time_title"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/information_face_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <TextView
+            android:id="@+id/practice_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:text="@string/information_practice_time"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textColor"/>
+
+        <Button
+            android:id="@+id/strokeSymptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/information_button_active"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_below="@id/practice_text"
+            android:layout_centerInParent="true"
+            android:text="@string/information_practice_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

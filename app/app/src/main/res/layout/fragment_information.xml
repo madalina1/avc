@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InformationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/informationBackground"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:contentDescription="@string/information_fragment"
+            android:src="@drawable/information_background"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/information_card"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/informationBackground"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="8dp"
+            android:padding="12dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <FrameLayout
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <Button
+                        android:id="@+id/strokeSymptoms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:background="@drawable/information_button_active"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="@string/information_symptoms"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/fast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:background="@drawable/information_button"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="@string/information_fast"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/titleColor"
+                        android:textSize="16sp"
+                        android:layout_gravity="end"/>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separatorColor"
+                    />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/fragmentInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"/>
+                </ScrollView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StrokeSymptomsFragment"
+    android:background="#FFFFFF"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp">
+
+    <ImageView
+        android:id="@+id/image_symptoms"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/stroke_symptoms_fragment"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/information_symptoms" />
+
+    <TextView
+        android:id="@+id/stroke_symptoms_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_symptoms"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

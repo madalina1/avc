@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/testingBackground"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:contentDescription="@string/testing_fragment"
+            android:src="@drawable/testing_background"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/test_somebody_card"
+            android:layout_width="260dp"
+            android:layout_height="230dp"
+            android:layout_below="@id/testingBackground"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="8dp"
+            android:padding="12dp"
+            android:layout_marginTop="-50dp"
+            android:onClick="goToOtherTest">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center|top"
+                    android:src="@drawable/somebody_else_testing"
+                    android:contentDescription="@string/testing_fragment"/>
+
+                <TextView
+                    android:id="@+id/test_somebody_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/test_somebody_title"
+                    android:gravity="center|bottom"
+                    android:textColor="@color/titleColor"
+                    android:textSize="16sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/test_yourself_card"
+            android:layout_width="260dp"
+            android:layout_height="230dp"
+            android:layout_below="@id/test_somebody_card"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="8dp"
+            android:padding="12dp"
+            android:layout_marginTop="20dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center|top"
+                    android:src="@drawable/yourself_testing"
+                    android:contentDescription="@string/testing_fragment"/>
+
+                <TextView
+                    android:id="@+id/test_yourself_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/test_yourself_title"
+                    android:gravity="center|bottom"
+                    android:textColor="@color/titleColor"
+                    android:textSize="16sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

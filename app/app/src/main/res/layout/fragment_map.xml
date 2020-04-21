@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/mapBackground"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:contentDescription="@string/map_fragment"
+            android:src="@drawable/map_background"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mapBackground"
+            android:layout_marginTop="-50dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
