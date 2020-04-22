@@ -35,6 +35,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.avcapp.selfTesting.CustomView
 import com.example.avcapp.R
 import com.example.avcapp.selfTesting.KEY_EVENT_ACTION
 import com.example.avcapp.selfTesting.SelfTestingFaceFragment
@@ -269,6 +270,10 @@ class CameraFragment : Fragment() {
                 // Values returned from our analyzer are passed to the attached listener
                 // We log image analysis results here - you should do something useful
                 // instead!
+                container.findViewById<CustomView>(R.id.customView).x += 30
+                container.findViewById<CustomView>(R.id.customView).y += 30
+
+
                 Log.d(TAG, "Average bla: $luma")
             }
             ssa.myinit()
