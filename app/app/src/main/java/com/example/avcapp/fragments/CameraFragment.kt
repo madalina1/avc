@@ -20,6 +20,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.IntentFilter
 import android.content.res.Configuration
+import android.graphics.Color
 import android.hardware.display.DisplayManager
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -270,8 +271,12 @@ class CameraFragment : Fragment() {
                 // Values returned from our analyzer are passed to the attached listener
                 // We log image analysis results here - you should do something useful
                 // instead!
-                container.findViewById<CustomView>(R.id.customView).x += 30
-                container.findViewById<CustomView>(R.id.customView).y += 30
+//                container.findViewById<CustomView>(R.id.customView).x += 20
+                var cw = container.findViewById<CustomView>(R.id.customView)
+                cw.setCol(Color.BLACK)
+                cw.invalidate()
+                cw.x += 30
+                cw.y += 30
 
 
                 Log.d(TAG, "Average bla: $luma")
