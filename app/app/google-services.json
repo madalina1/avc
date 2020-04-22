@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251594660612",
+    "firebase_url": "https://avcapp-24c10.firebaseio.com",
+    "project_id": "avcapp-24c10",
+    "storage_bucket": "avcapp-24c10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251594660612:android:61a5d90aed4a2269a10e51",
+        "android_client_info": {
+          "package_name": "com.example.avcapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251594660612-pt8eej6qd3g2rlg584j83226rqkplgbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApEI-DwU84yq5p5mB9H3EpxwweQorKRBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251594660612-pt8eej6qd3g2rlg584j83226rqkplgbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,8 +8,12 @@ import androidx.viewpager.widget.ViewPager
 import com.example.avcapp.utils.makeStatusBarTransparent
 import com.google.android.material.tabs.TabLayout
 
-
+/**
+ * Main entry point into our app. This app follows the single-activity pattern, and all
+ * functionality is implemented in the form of fragments.
+ */
 class MainActivity : AppCompatActivity() {
+
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
 

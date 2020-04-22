@@ -9,4 +9,9 @@
     <color name="titleColor">#707a79</color>
     <color name="separatorColor">#cecece</color>
     <color name="textColor">#9e9e9e</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
 </resources>
