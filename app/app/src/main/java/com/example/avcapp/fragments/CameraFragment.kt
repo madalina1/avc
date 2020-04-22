@@ -35,9 +35,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.example.avcapp.KEY_EVENT_ACTION
 import com.example.avcapp.R
-import com.example.avcapp.SelfTesting
+import com.example.avcapp.selfTesting.KEY_EVENT_ACTION
 import com.example.avcapp.selfTesting.SelfTestingFaceFragment
 import com.google.firebase.FirebaseApp
 import kotlinx.coroutines.Dispatchers
