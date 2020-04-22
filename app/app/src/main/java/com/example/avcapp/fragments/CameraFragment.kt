@@ -18,9 +18,7 @@ package com.example.avcapp.fragments
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.IntentFilter
 import android.content.res.Configuration
-import android.graphics.Color
 import android.hardware.display.DisplayManager
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -36,21 +34,17 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.example.avcapp.selfTesting.CustomView
 import com.example.avcapp.R
-import com.example.avcapp.selfTesting.KEY_EVENT_ACTION
+import com.example.avcapp.selfTesting.CustomView
 import com.example.avcapp.selfTesting.SelfTestingFaceFragment
 import com.google.firebase.FirebaseApp
 import com.google.firebase.ml.vision.common.FirebaseVisionPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
-import java.nio.ByteBuffer
-import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import kotlin.collections.ArrayList
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
