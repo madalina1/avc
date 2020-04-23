@@ -25,8 +25,9 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
     init {
         val highAccOpts :FirebaseVisionFaceDetectorOptions =
             FirebaseVisionFaceDetectorOptions.Builder()
-//                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
-                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
+//                .setContourMode()
+                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+//                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
                 .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
                 .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
                 .build()
