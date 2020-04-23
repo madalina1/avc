@@ -1,6 +1,7 @@
 package com.example.avcapp.fragments
 
 import android.util.Log
+import android.util.Size
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.firebase.ml.vision.FirebaseVision
@@ -11,8 +12,10 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark
 
-typealias SymListener = (mouthLeft : FirebaseVisionPoint, mouthRigth : FirebaseVisionPoint,
-                         mouthBottom : FirebaseVisionPoint,nose : FirebaseVisionPoint) -> Unit
+typealias SymListener = (
+    imgSize: Size,
+    mouthLeft : FirebaseVisionPoint, mouthRigth : FirebaseVisionPoint,
+    mouthBottom : FirebaseVisionPoint,nose : FirebaseVisionPoint) -> Unit
 
 class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer {
 
@@ -22,7 +25,8 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
     init {
         val highAccOpts :FirebaseVisionFaceDetectorOptions =
             FirebaseVisionFaceDetectorOptions.Builder()
-                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
+                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+//                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
                 .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
                 .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
                 .build()
@@ -36,7 +40,7 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
         val mediaImage = imageProxy?.image
         if (mediaImage != null) {
             val image = FirebaseVisionImage.fromMediaImage(mediaImage,0)
-            Log.d("imageSize", imageProxy.height.toString() + " " + imageProxy.width.toString())
+//            Log.d("imageSize", imageProxy.height.toString() + " " + imageProxy.width.toString())
 
             // Pass image to an ML Kit Vision API
             // ...
@@ -52,6 +56,7 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
 
 
                         listener?.invoke(
+                            Size(image.bitmap.width, image.bitmap.height),
                             face.getLandmark(FirebaseVisionFaceLandmark.MOUTH_LEFT)?.position!!,
                             face.getLandmark(FirebaseVisionFaceLandmark.MOUTH_RIGHT)?.position!!,
                             face.getLandmark(FirebaseVisionFaceLandmark.MOUTH_BOTTOM)?.position!!,

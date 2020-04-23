@@ -23,6 +23,7 @@ import android.hardware.display.DisplayManager
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.Log
+import android.util.Size
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -193,13 +194,15 @@ class CameraFragment : Fragment() {
 
             context?.let { FirebaseApp.initializeApp(it) }
             var ssa = SmileSymAnalyzer {
-                                            mouthLeft : FirebaseVisionPoint,
-                                            mouthRigth : FirebaseVisionPoint,
-                                            mouthBottom : FirebaseVisionPoint,
-                                            noseBase: FirebaseVisionPoint
+                    imageSize : Size,
+                    mouthLeft : FirebaseVisionPoint,
+                    mouthRigth : FirebaseVisionPoint,
+                    mouthBottom : FirebaseVisionPoint,
+                    noseBase: FirebaseVisionPoint
                                                     ->
                 // Values returned from our analyzer are passed to this attached listener
                 var cw = container.findViewById<CustomView>(R.id.customView)
+                cw.setImageSize(imageSize)
                 cw.setPosition(mouthLeft, mouthRigth, mouthBottom, noseBase)
                 cw.invalidate()
 
