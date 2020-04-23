@@ -182,11 +182,12 @@ class CameraFragment : Fragment() {
 
             // ImageCapture
             imageCapture = ImageCapture.Builder()
-                .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
+                .setCaptureMode(ImageCapture.CAPTURE_MODE_MAXIMIZE_QUALITY)
                 // We request aspect ratio but no resolution to match preview config, but letting
                 // CameraX optimize for whatever specific resolution best fits our use cases
-//                .setTargetAspectRatio(screenAspectRatio)
-                .setTargetResolution(Size(1728, 960))
+                .setTargetAspectRatio(screenAspectRatio)
+
+//                .setTargetResolution(Size(1728, 960))
                 // Set initial target rotation, we will have to call this again if rotation changes
                 // during the lifecycle of this use case
                 .setTargetRotation(rotation)
