@@ -21,12 +21,12 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
 
     private val listener = listener //this should be something that draws on top of the camera
     private var detector: FirebaseVisionFaceDetector? = null
-
+    private lateinit var  image : FirebaseVisionImage
     init {
         val highAccOpts :FirebaseVisionFaceDetectorOptions =
             FirebaseVisionFaceDetectorOptions.Builder()
-                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
-//                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
+//                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+                .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
                 .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
                 .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
                 .build()
@@ -39,7 +39,7 @@ class SmileSymAnalyzer(listener : SymListener? = null) : ImageAnalysis.Analyzer 
 
         val mediaImage = imageProxy?.image
         if (mediaImage != null) {
-            val image = FirebaseVisionImage.fromMediaImage(mediaImage,0)
+            image = FirebaseVisionImage.fromMediaImage(mediaImage,0)
 //            Log.d("imageSize", imageProxy.height.toString() + " " + imageProxy.width.toString())
 
             // Pass image to an ML Kit Vision API
