@@ -27,7 +27,7 @@
         <TextView
             android:id="@+id/face_text"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="16sp"
             android:layout_below="@+id/face_title"
@@ -39,7 +39,7 @@
             android:id="@+id/face_image"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/face"
             android:layout_below="@+id/face_title"
             android:layout_alignParentEnd="true"
@@ -73,7 +73,7 @@
         <TextView
             android:id="@+id/arms_text"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="16sp"
             android:layout_below="@+id/arms_title"
@@ -85,7 +85,7 @@
             android:id="@+id/arms_image"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/arms"
             android:layout_below="@+id/arms_title"
             android:layout_alignParentEnd="true"
@@ -118,7 +118,7 @@
         <TextView
             android:id="@+id/speech_text"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="16sp"
             android:layout_below="@+id/speech_title"
@@ -130,7 +130,7 @@
             android:id="@+id/speech_image"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/speech"
             android:layout_below="@+id/speech_title"
             android:layout_alignParentEnd="true"
@@ -163,7 +163,7 @@
         <TextView
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="16sp"
             android:layout_below="@+id/time_title"
@@ -185,7 +185,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:paddingStart="14dp"
         android:paddingEnd="14dp">
 

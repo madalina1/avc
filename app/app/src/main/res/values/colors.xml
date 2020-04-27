@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryLight">#99009688</color>
     <color name="colorAccent">#ffa000</color>
     <color name="colorMap">#0277bd</color>
     <color name="colorInformation">#e57373</color>
@@ -9,6 +10,11 @@
     <color name="titleColor">#707a79</color>
     <color name="separatorColor">#cecece</color>
     <color name="textColor">#9e9e9e</color>
+    <color name="backgroundColor">#FFFFFFFF</color>
+    <color name="testing_title_color">#7a9199</color>
+    <color name="testingDeactivatedButton">#a6c1c9</color>
+    <color name="riskColor">#ef5350</color>
+    <color name="mediumRisk">#ff6f00</color>
 
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="icActive">#FFFFFFFF</color>
