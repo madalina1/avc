@@ -1,8 +1,10 @@
 package com.example.avcapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.avcapp.utils.makeStatusBarTransparent
@@ -47,6 +49,18 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+
+        val sharedPref = this.getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE) ?: return
+        with (sharedPref.edit()) {
+            putString(getString(R.string.user_name), "John Doe")
+            putString(getString(R.string.country), "Iasi, Romania")
+            putString(getString(R.string.contact_name), "Robert Jr.")
+            putString(getString(R.string.contact_number), "+40751753645")
+            commit()
+        }
+
+        (this.findViewById<View>(R.id.welcomeMessage) as TextView).text = getString(R.string.welcome_message,
+            sharedPref.getString(getString(R.string.user_name), ""))
     }
 
     fun goToSettings(view: View) {

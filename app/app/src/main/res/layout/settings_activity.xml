@@ -1,15 +1,286 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/settings"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/settingsBackground"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hahha"/>
+            android:contentDescription="@string/title_activity_settings"
+            android:src="@drawable/settings_background"
+            android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/title_activity_settings"
+                        android:src="@drawable/ic_keyboard_arrow_left_24dp"
+                        android:layout_gravity="start"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="backButton"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_title"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:onClick="backButton"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="@drawable/white_border_button"
+                            android:contentDescription="@string/title_activity_settings"
+                            android:text="@string/edit_profile_button"
+                            android:layout_gravity="end"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp">
+
+                    <FrameLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/profile_image"
+                            android:src="@color/colorAccent"
+                            android:elevation="5dp"/>
+
+                        <TextView
+                            android:id="@+id/profile_placeholder"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"
+                            android:elevation="5dp"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/profile_name"
+                            android:text="John Doe"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@android:color/white"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_location_on_24dp"
+                                android:layout_marginStart="-5dp"
+                                android:contentDescription="@string/title_activity_settings"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/profile_city"
+                                android:text="Iasi"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@color/titleColorLight"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textSize="16sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profile_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+<!--                <GridLayout-->
+<!--                    android:columnCount="3"-->
+<!--                    android:alignmentMode="alignMargins"-->
+<!--                    android:columnOrderPreserved="true"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:layout_marginBottom="25dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    >-->
+
+<!--                </GridLayout>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_contacts_title"
+                    android:textColor="@color/titleColor"
+                    android:layout_gravity="top|start"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/emergency_contacts_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"/>
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    android:layout_gravity="center">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:layout_gravity="center|start">-->
+
+<!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                android:layout_width="80dp"-->
+<!--                                android:layout_height="80dp"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:id="@+id/contact_image"-->
+<!--                                android:src="@color/colorPrimary"-->
+<!--                                />-->
+
+<!--                        </FrameLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:layout_marginTop="30dp"-->
+<!--                            android:layout_marginStart="20dp">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="Robert Jr."-->
+<!--                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textColor="@color/titleColor"-->
+<!--                                android:textStyle="bold"-->
+<!--                                />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="0751 753 645"-->
+<!--                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                                android:textSize="14sp"-->
+<!--                                android:textColor="@color/titleColor"-->
+<!--                                />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center">-->
+<!--                            <ImageButton-->
+<!--                                android:layout_width="50dp"-->
+<!--                                android:layout_height="50dp"-->
+<!--                                android:background="@android:color/transparent"-->
+<!--                                android:contentDescription="@string/title_activity_settings"-->
+<!--                                android:src="@drawable/ic_delete_forever_32dp"-->
+<!--                                android:layout_gravity="end"-->
+<!--                                android:layout_marginEnd="12dp"/>-->
+<!--                        </FrameLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="@string/title_activity_settings"
+                    android:src="@drawable/ic_add_32dp"
+                    android:layout_gravity="center"
+                    android:elevation="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+            </LinearLayout>
     </FrameLayout>
-</LinearLayout>
+</ScrollView>

@@ -9,7 +9,7 @@
     <string name="information_fragment">Information</string>
 
     <!-- Welcome -->
-    <string name="welcome_message">Welcome, John Doe!</string>
+    <string name="welcome_message">Welcome, %1$s!</string>
 
     <!-- Testing cards -->
     <string name="test_somebody_title">Test somebody else</string>
@@ -35,6 +35,9 @@
 
     <!-- Settings -->
     <string name="title_activity_settings">Settings</string>
+    <string name="profile_title">Profile</string>
+    <string name="emergency_contacts_title">Emergency contacts</string>
+    <string name="edit_profile_button">Edit profile</string>
 
     <string name="back_pressed_message">Press back again to exit</string>
     <string name="next_button">Next</string>
@@ -75,6 +78,13 @@
     <!-- Notification messages -->
     <string name="notification_title">Stroke detected!</string>
     <string name="notification_big_text">Detected stroke at %1$s</string>
+    <string name="message_text">HELP! I have a stroke! The symptoms were detected at: %1$s</string>
+
+    <!-- Preference -->
+    <string name="user_name">USER_NAME</string>
+    <string name="country">COUNTRY</string>
+    <string name="contact_name">CONTACT_NAME</string>
+    <string name="contact_number">CONTACT_NUMBER</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

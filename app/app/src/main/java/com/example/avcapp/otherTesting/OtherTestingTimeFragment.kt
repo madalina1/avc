@@ -1,13 +1,16 @@
 package com.example.avcapp.otherTesting
 
+import android.Manifest
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.View
@@ -17,13 +20,14 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.avcapp.MainActivity
 import com.example.avcapp.OtherTesting
 import com.example.avcapp.R
-import com.google.android.gms.maps.*
-import java.util.*
 import com.example.avcapp.utils.createMap
+import com.google.android.gms.maps.MapView
+import java.util.*
 
 class OtherTestingTimeFragment : Fragment() {
     private var mMapView: MapView? = null
@@ -112,6 +116,18 @@ class OtherTestingTimeFragment : Fragment() {
                 mBuilder.setChannelId(channelId)
             }
             mNotificationManager.notify(0, mBuilder.build())
+
+            val sharedPref = activity?.getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+
+            val smsManager: SmsManager = SmsManager.getDefault()
+            val emergencyContact = sharedPref?.getString(getString(R.string.contact_number), "") as String
+            val smsText = getString(R.string.message_text, "$dateString")
+
+            if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.SEND_SMS)
+                == PackageManager.PERMISSION_GRANTED) {
+                smsManager.sendTextMessage(emergencyContact, null, smsText, null, null)
+            }
+
         }
 
         //Medium cases
