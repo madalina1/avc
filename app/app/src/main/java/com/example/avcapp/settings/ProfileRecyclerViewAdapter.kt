@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.settings
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.avcapp.R
 
 
 class ProfileRecyclerViewAdapter(
@@ -18,7 +19,9 @@ class ProfileRecyclerViewAdapter(
         val view: View
         val mInflater = LayoutInflater.from(mContext)
         view = mInflater.inflate(R.layout.cardview_settings_profile, parent, false)
-        return MyViewHolder(view)
+        return MyViewHolder(
+            view
+        )
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

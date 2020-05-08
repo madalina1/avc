@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.example.avcapp.settings.SettingsActivity
 import com.example.avcapp.utils.makeStatusBarTransparent
 import com.google.android.material.tabs.TabLayout
 

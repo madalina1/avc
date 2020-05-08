@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.settings
 
 class EmergencyContactsCard(contactImage: Int, contactName: String?, contactNumber: String) {
 

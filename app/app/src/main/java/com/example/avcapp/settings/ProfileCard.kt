@@ -1,4 +1,4 @@
-package com.example.avcapp
+package com.example.avcapp.settings
 
 class ProfileCard(cardTitle: String, cardValue: String, cardImage: Int) {
 

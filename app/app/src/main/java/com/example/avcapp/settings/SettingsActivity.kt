@@ -1,8 +1,7 @@
-package com.example.avcapp
+package com.example.avcapp.settings
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.view.View.inflate
 import android.widget.TextView
@@ -10,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.avcapp.*
 import com.example.avcapp.utils.makeStatusBarTransparent
-import org.w3c.dom.Text
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -35,7 +34,8 @@ class SettingsActivity : AppCompatActivity() {
         val profilePlaceholder = this.findViewById(R.id.profile_placeholder) as TextView
         profilePlaceholder.text = userName?.let { getInitials(it) }
 
-        val layout: View  = inflate(applicationContext, R.layout.cardview_emergency_contacts,null);
+        val layout: View  = inflate(applicationContext,
+            R.layout.cardview_emergency_contacts,null);
 
         val contactPlaceholder = layout.findViewById(R.id.contact_placeholder) as TextView
         contactPlaceholder.text = contactName?.let { getInitials(it) }
@@ -87,12 +87,20 @@ class SettingsActivity : AppCompatActivity() {
         )
 
         val profileRecyclerView = findViewById<View>(R.id.profile_recycler_view) as RecyclerView
-        val profileAdapter = ProfileRecyclerViewAdapter(this, listProfileCard)
+        val profileAdapter =
+            ProfileRecyclerViewAdapter(
+                this,
+                listProfileCard
+            )
         profileRecyclerView.layoutManager = GridLayoutManager(this, 3)
         profileRecyclerView.adapter = profileAdapter
 
         val contactsRecyclerView = findViewById<View>(R.id.emergency_contacts_recycler_view) as RecyclerView
-        val contactsAdapter = EmergencyContactsRecyclerView(this, emergencyContactsList)
+        val contactsAdapter =
+            EmergencyContactsRecyclerView(
+                this,
+                emergencyContactsList
+            )
         contactsRecyclerView.layoutManager = GridLayoutManager(this, 1)
         contactsRecyclerView.adapter = contactsAdapter
 
