@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtherTesting"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/other_speech_container"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/other_speech_image"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:src="@drawable/other_speech"
+            android:contentDescription="@string/other_testing_speech" />
+
+        <TextView
+            android:id="@+id/other_speech_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/other_testing_speech"
+            android:textColor="@color/testing_title_color"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/other_speech_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/other_testing_speech_text"
+            android:textColor="@color/textColor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:lineSpacingExtra="3dp"/>
+
+        <RadioGroup
+            android:id="@+id/other_speech_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="45dp">
+
+            <RadioButton
+                android:id="@+id/radio_speech_yes"
+                android:onClick="onSpeechRadioButtonClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_testing_yes"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textSize="16sp"
+                android:textColor="@color/colorTestingAccent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/colorTestingAccent"/>
+            <RadioButton android:id="@+id/radio_speech_no"
+                android:onClick="onSpeechRadioButtonClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_testing_no"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textSize="16sp"
+                android:textColor="@color/colorTestingAccent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/colorTestingAccent"/>
+            <RadioButton android:id="@+id/radio_speech_idk"
+                android:onClick="onSpeechRadioButtonClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_testing_know"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textSize="16sp"
+                android:textColor="@color/colorTestingAccent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/colorTestingAccent"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/other_speech_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/next_button"
+        android:textColor="@color/testingDeactivatedButton"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="goToOtherTestingTime"
+        />
+
+</FrameLayout>

@@ -1,21 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright 2020 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     https://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
 <resources>
-    <string name="app_name">CameraX Basic</string>
+    <!-- Application name -->
+    <string name="app_name">Stroke Help</string>
+
+    <!-- Main layouts -->
+    <string name="testing_fragment">Testing</string>
+    <string name="map_fragment">Map</string>
+    <string name="information_fragment">Information</string>
+
+    <!-- Welcome -->
+    <string name="welcome_message">Welcome, %1$s!</string>
+
+    <!-- Testing cards -->
+    <string name="test_somebody_title">Test somebody else</string>
+    <string name="test_yourself_title">Test yourself</string>
+
+    <!-- Map -->
+    <string name="map_marker_snippet">Stroke treatment clinic</string>
+
+    <!-- Information categories -->
+    <string name="information_symptoms">Stroke symptoms</string>
+    <string name="information_fast">F.A.S.T</string>
+
+    <!-- Information FAST -->
+    <string name="information_face_title">Face drooping</string>
+    <string name="information_arms_title">Arm weakness</string>
+    <string name="information_speech_title">Speech</string>
+    <string name="information_time_title">Time to call 112</string>
+
+    <!-- Information Practice Time -->
+    <string name="information_practice_time">It\'s important for everyone to be aware of these signs and symptoms, particularly if you live with or care for a person who is in a high-risk group, such as someone who is elderly or has diabetes or high blood pressure.
+    \n\nSimulate the test with the following F.A.S.T practice test:</string>
+    <string name="information_practice_button">Practice test</string>
+
+    <!-- Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="profile_title">Profile</string>
+    <string name="emergency_contacts_title">Emergency contacts</string>
+    <string name="edit_profile_button">Edit profile</string>
+
+    <string name="back_pressed_message">Press back again to exit</string>
+    <string name="next_button">Next</string>
+
+    <!-- Test somebody else messages -->
+    <string name="other_testing_face">Face drooping</string>
+    <string name="other_testing_face_text">Does one side of the face droop or is it numb? Ask the person to smile. Is the person\'s smile uneven or lopsided?</string>
+
+    <string name="other_testing_arms">Arm Weakness</string>
+    <string name="other_testing_arms_text">Is one arm weak or numb? Ask the person to raise both arms. Does one arm drift downward?</string>
+
+    <string name="other_testing_speech">Speech</string>
+    <string name="other_testing_speech_text">Is speech slurred? Is the person unable to speak or hard to understand? Ask the person to repeat a simple sentence, like \"The sky is blue!\".</string>
+
+    <string name="other_testing_symptoms">Other possible symptoms</string>
+
+    <string name="other_testing_time">You have a %1$s risk of stroke!</string>
+    <string name="other_testing_time_text">Please, act F.A.S.T!</string>
+    <string name="other_testing_time_location_risk">You can go to the hospital immediately! </string>
+    <string name="other_testing_time_location">%1$sBelow you can find the closest hospital to your location:</string>
+    <string name="other_testing_time_emergency">Call 112!</string>
+
+    <!-- Test somebody else wizard -->
+    <string name="other_testing_yes">Yes</string>
+    <string name="other_testing_no">No</string>
+    <string name="other_testing_know">I don\'t know</string>
+
+    <!-- Test somebody else checkbox symptoms -->
+    <string name="other_testing_checkbox_paralysis">Complete paralysis of 1 side of the body</string>
+    <string name="other_testing_checkbox_vision">Sudden loss or blurring of vision</string>
+    <string name="other_testing_checkbox_dizziness">Dizziness</string>
+    <string name="other_testing_checkbox_confusion">Confusion</string>
+    <string name="other_testing_checkbox_headache">A sudden and very severe headache</string>
+    <string name="other_testing_checkbox_convulsion">A sudden, violent, irregular movement of the body</string>
+    <string name="other_testing_checkbox_vomiting">Nausea or vomiting</string>
+    <string name="other_testing_checkbox_deviation">Conjugate deviation of eyes</string>
+
+    <!-- Notification messages -->
+    <string name="notification_title">Stroke detected!</string>
+    <string name="notification_big_text">Detected stroke at %1$s</string>
+    <string name="message_text">HELP! I have a stroke! The symptoms were detected at: %1$s</string>
+
+    <!-- Preference -->
+    <string name="user_name">USER_NAME</string>
+    <string name="country">COUNTRY</string>
+    <string name="contact_name">CONTACT_NAME</string>
+    <string name="contact_number">CONTACT_NUMBER</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Camera strings -->
     <string name="capture_button_alt">Capture</string>
     <string name="switch_camera_button_alt">Switch camera</string>
     <string name="gallery_button_alt">Gallery</string>
@@ -28,4 +114,7 @@
     <string name="delete_button_alt">Delete</string>
     <string name="delete_dialog">Delete current photo?</string>
     <string name="delete_title">Confirm</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtherTesting"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/other_speech_container"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/other_speech_image"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:src="@drawable/stroke_symptoms_fragment"
+            android:contentDescription="@string/other_testing_speech" />
+
+        <TextView
+            android:id="@+id/other_speech_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/other_testing_symptoms"
+            android:textColor="@color/testing_title_color"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp">
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_paralysis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_paralysis"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_headache"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_headache"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_vision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_vision"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_convulsion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_convulsion"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_deviation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_deviation"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_vomiting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_vomiting"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_confusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_confusion"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox android:id="@+id/checkbox_symptoms_dizziness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other_testing_checkbox_dizziness"
+                        android:onClick="onOtherTestingCheckboxClicked"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTestingAccent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:buttonTint="@color/colorTestingAccent"
+                        android:layout_marginBottom="10dp"/>
+                </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/other_symptoms_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/next_button"
+        android:textColor="@color/testing_title_color"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="goToOtherTestingTime"
+        />
+
+</FrameLayout>
