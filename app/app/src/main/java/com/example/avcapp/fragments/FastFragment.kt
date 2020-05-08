@@ -53,19 +53,19 @@ class FastFragment : Fragment() {
         val timeTextView = view.findViewById(R.id.time_text) as TextView
 
         try {
-            faceText = context!!.assets.open("face_information.txt").bufferedReader().use{
+            faceText = requireContext().assets.open("face_information.txt").bufferedReader().use{
                 it.readText()
             }
 
-            armsText = context!!.assets.open("arms_information.txt").bufferedReader().use{
+            armsText = requireContext().assets.open("arms_information.txt").bufferedReader().use{
                 it.readText()
             }
 
-            speechText = context!!.assets.open("speech_information.txt").bufferedReader().use{
+            speechText = requireContext().assets.open("speech_information.txt").bufferedReader().use{
                 it.readText()
             }
 
-            timeText = context!!.assets.open("time_information.txt").bufferedReader().use{
+            timeText = requireContext().assets.open("time_information.txt").bufferedReader().use{
                 it.readText()
             }
         } catch (e: IOException) {
